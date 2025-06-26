@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Cake & Shop Bakery</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <main>
+        <section class="menu-page container">
+            <h2>Pilih Kategori</h2>
+            <div class="category-tabs">
+                <button class="category-button active" data-category="all">Semua</button>
+                <button class="category-button" data-category="cheesecake">Cheese Cake</button>
+                <button class="category-button" data-category="sandwich">Sandwich Fruit</button>
+                <button class="category-button" data-category="cake-birthday">Cake Birthday</button>
+                <button class="category-button" data-category="tart">Tart</button>
+            </div>
+            <div class="menu-options">
+                <input type="text" id="find-product" placeholder="Cari produk...">
+                <select id="sort-product">
+                    <option value="name-asc">Nama (A-Z)</option>
+                    <option value="name-desc">Nama (Z-A)</option>
+                    <option value="price-asc">Harga (Rendah-Tinggi)</option>
+                    <option value="price-desc">Harga (Tinggi-Rendah)</option>
+                </select>
+            </div>
+            <div class="product-grid menu-items">
+                <!-- Contoh Produk, Anda bisa menambahkan lebih banyak atau memuatnya dari JS jika kompleks -->
+                <div class="product-card" data-category="cheesecake">
+                    <img src="/images/cheesecake_oreo.jpg" alt="Cheesecake Oreo"> <h4>Cheesecake Oreo</h4>
+                    <p>"Double choco delight dengan renyahnya oreo disetiap gigitan"</p>
+                    <span class="price">Rp 45.000</span>
+                </div>
+                <div class="product-card" data-category="cheesecake">
+                    <img src="/images/Chesse cake strawberry.jpg" alt="Cheesecake Strawberry x Banan">
+                    <h4>Cheesecake Strawberry x Banan</h4>
+                    <p>"Rasa Fruity yang seimbang strawberry asam segara, banana lembut manis"</p>
+                    <span class="price">Rp 50.000</span>
+                </div>
+                <!-- Tambahkan produk lainnya di sini sesuai format di atas -->
+                 <div class="product-card" data-category="cheesecake">
+                    <img src="/images/Chesse Cake Mangga (1).jpg" alt="Cheesecake Manggo"> <h4>Cheesecake Manggo</h4>
+                    <p>"Segar Manis mangga, lembutnya chesee cake kombinasi sempurna"</p>
+                    <span class="price">Rp 55.000</span>
+                </div>
+                <div class="product-card" data-category="cheesecake">
+                    <img src="/images/Lotus (1).jpg" alt="Cheesecake Lotus">
+                    <h4>Cheesecake Lotus</h4>
+                    <p>"Manis Creamy, dan bikin nagih, Lotus Cheesecake special untukmu"</p>
+                    <span class="price">Rp 60.000</span>
+                </div>
+                <div class="product-card" data-category="sandwich">
+                    <img src="/images/sandwich.jpg" alt="Sandwich Fruit Mix">
+                    <h4>Sandwich Fruit Mix</h4>
+                    <p>"Pilihan tepat untuk Anda yang menginginkan hidangan ringan."</p>
+                    <span class="price">Rp 25.000</span>
+                </div>
+                 <div class="product-card" data-category="sandwich">
+                    <img src="/images/sandwich strauberry.jpg" alt="Sandwich Stroberi">
+                    <h4>Sandwich Stroberi</h4>
+                    <p>"Kombinasi sempurna antara rasa dan manfaat."</p>
+                    <span class="price">Rp 22.000</span>
+                </div>
+                <div class="product-card" data-category="sandwich">
+                    <img src="/images/sandwich anggur.jpg" alt="Sandwich Anggur">
+                    <h4>Sandwich Anggur</h4>
+                    <p>"Nikmati kesegaran anggur berkualitas dalam setiap gigitan."</p>
+                    <span class="price">Rp 23.000</span>
+                </div>
+                <div class="product-card" data-category="sandwich">
+                    <img src="/images/Sandwich Jeruk.jpg" alt="Sandwich Jeruk">
+                    <h4>Sandwich Jeruk</h4>
+                    <p>"Manis, asam, dan super fresh! Pilihan menyegarkan."</p>
+                    <span class="price">Rp 20.000</span>
+                </div>
+                <div class="product-card" data-category="cake-birthday">
+                    <img src="/images/cake chocolate.jpg" alt="Cake Chocolate Birthday">
+                    <h4>Cake Chocolate</h4>
+                    <p>"Cokelat premium untuk momen spesial Anda."</p>
+                    <span class="price">Rp 70.000</span>
+                </div>
+                 <div class="product-card" data-category="tart">
+                    <img src="/images/Tart Fruit.jpg" alt="Mini fruit tart">
+                    <h4>Mini fruit tart (4pcs)</h4>
+                    <p>"Crust renyah, custard lembut, dengan topping buah segar."</p>
+                    <span class="price">Rp 100.000</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="/JAVA/main-script.js"></script>
+    <script src="/JAVA/menu-logic.js"></script>
+</body>
+</html>
