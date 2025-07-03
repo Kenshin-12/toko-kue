@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (navbarLoaded) {
             initializeNavbarLogic();
         }
+
+        // Initialize home page specific logic
+        initializeHomePageLogic();
     }
 
     function initializeNavbarLogic() {
@@ -129,6 +132,8 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.removeItem('isLoggedIn');
             localStorage.removeItem('loggedInUser');
             updateNavbarBasedOnLoginStatus();
+            // Update tombol menu setelah logout
+            updateMenuButtonVisibility();
             window.location.href = 'login.html';
         }
 
@@ -146,6 +151,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
         updateNavbarBasedOnLoginStatus();
     }
+
+    // Fungsi baru untuk menghandle logika halaman home
+    function initializeHomePageLogic() {
+        // Update visibility tombol menu sesuai status login
+        updateMenuButtonVisibility();
+
+        // Listen untuk perubahan localStorage (jika ada perubahan login dari tab lain)
+        window.addEventListener('storage', (event) => {
+            if (event.key === 'isLoggedIn') {
+                updateMenuButtonVisibility();
+            }
+        });
+    }
+
+    // Fungsi untuk mengupdate visibility tombol "Lihat Menu Kami"
+    function updateMenuButtonVisibility() {
+        const menuButton = document.getElementById('menu-button');
+        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+        if (menuButton) {
+            if (isLoggedIn) {
+                menuButton.style.display = 'inline-block'; // Tampilkan tombol jika sudah login
+            } else {
+                menuButton.style.display = 'none'; // Sembunyikan tombol jika belum login
+            }
+        }
+    }
+
+    // Expose fungsi updateMenuButtonVisibility secara global agar bisa dipanggil dari tempat lain
+    window.updateMenuButtonVisibility = updateMenuButtonVisibility;
 
     initializePageLayout();
 });

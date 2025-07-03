@@ -41,7 +41,8 @@ h1, h2, h3, h4 {
     color: #5a3e2b; /* Darker brown for headings */
     margin-bottom: 0.8em;
 }
-h2 { font-size: 2em; }
+h2 { font-size: 2em; 
+ padding: 2rem 1rem 1rem 1rem;}
 h3 { font-size: 1.5em; }
 
 /* Header */
@@ -50,7 +51,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     background-color: #d2b48c;
     font-family: 'Linden Hill', serif;
 }
@@ -404,6 +405,14 @@ footer {
 .center-text { text-align: center; margin-bottom: 1.5em; color: #d2b48c;}
 
 /* About Us Page */
+.about-banner {
+    background-color: rgba(255, 255, 255, 0.8); /* Latar belakang putih semi-transparan */
+    padding: 1em;
+    border: 2px solid #c08552;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-bottom: 2em; /* Tambahkan jarak bawah */
+}
 .about-us-page .container {
     width: 90%; /* Menggunakan lebar 90% */
     max-width: 1200px; /* Batasi lebar maksimal */
